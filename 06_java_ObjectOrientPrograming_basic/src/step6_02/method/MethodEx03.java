@@ -21,6 +21,29 @@ class ReturnEx {
 		return score2;
 	
 	}
+	
+	
+	int testReturn( ) {
+		
+		
+		
+		
+		
+		System.out.println("리턴 전 명령어1");
+		System.out.println("리턴 전 명령어2");
+		System.out.println("리턴 전 명령어3");
+		
+		// return 1,2,3,4,5; (error) return 데이터는 1개만 가능하다.
+		
+		return 0;
+   
+		// (eerror) reyunr이 실행되는 순간 메서드가 종료 된다.
+		//System.out.println("리턴 전 명령어1");
+		//System.out.println("리턴 전 명령어2");
+		//System.out.println("리턴 전 명령어3");
+		
+		
+	}
 }
 
 
