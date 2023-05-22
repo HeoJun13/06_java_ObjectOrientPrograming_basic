@@ -26,86 +26,89 @@ import java.util.Scanner;
  * 매출액 : 24000원
  */
 
-class movieTheater{
+class moviLearner {
 	
 	Scanner scan = new Scanner(System.in);
 	
 	int[] seat = new int[10];
-	int bookCnt = 0;
-	int Money = 0;
+	int boolCnt = 0;
+	int money = 0;
 	
-	void ShowAnswer() {
-		System.out.println("======롯데시네마=====");
-		System.out.println("1. 예매하기.");
-		System.out.println("2. 종료하기,");
+	void showMenu() {
+		
+		System.out.println("====== Cgv ======");
+		System.out.println("1. 예약하기.");
+		System.out.println("2. 종료하기.");
+		
 	}
 	
-	void cheakSeat() {
+	
+	
+	void showSeat() {
+		
 		for (int i = 0; i < seat.length; i++) {
-			if (seat[i] == 0) {
-				System.out.print( " [X] ");
-			}else {
+			if(seat[i] == 0) {
+				System.out.print(" [X] ");
+			}
+			else {
 				System.out.print(" [O] ");
 			}
 		}
 		System.out.println();
+		
 	}
 	
 	void choiceSeat() {
-		cheakSeat();
-		
-		System.out.println(" [좌석을 선택해주세요.] 1~10");
+		showSeat();
+		System.out.print(" [좌석을 선택해주세요] 1~10 ");
 		int dix = scan.nextInt();
 		
-		if (seat[dix] == 0) {
+		if (seat[dix]== 0) {
 			seat[dix] = 1;
-			bookCnt++;
-			System.out.println("예매를 완료했습니다.");
+			boolCnt++;
+			System.out.println("예매가 완료되었습니다.");
 		}
 		else {
-			System.out.println("이미 예매가 끝난 자리입니다.");
+			System.out.println("미리 에매가 완료된자리입니다.");
 		}
 	}
 	
-	void showSales() {
-		Money = bookCnt * 12000;
-		System.out.println("총 매출액 : " + Money + "원 입니다."); 
+	void seatprice() {
+		money = boolCnt * 12000;
+		System.out.println(" 총 수익금 : " + money + "입니다.");
+		
 	}
 	
 	void run() {
 		
-		while (true) {
+		while(true) {
 			
-			ShowAnswer();
+			showMenu();
 			
-			System.out.println("메뉴 선택 :");
+			System.out.println("메뉴 선택 : ");
 			int choice = scan.nextInt();
 			
 			if (choice == 1) {
 				choiceSeat();
-			}else if (choice == 2) {
-				showSales();
+			} else if (choice == 2) {
+				seatprice();
 				
 				System.out.println("프로그램 종료.");
 				break;
 			}
- 		}
+			
+		}
+		
 	}
-}
 	
+}
 
-
-
-
-
-public class MethodEx14_필기 {
+public class MethodEx14_필기2 {
 
 	public static void main(String[] args) {
 		
-		movieTheater ls = new movieTheater();
-		ls.run();
-
-		
+		moviLearner gf = new moviLearner();
+		gf.run();
 	}
 
 }

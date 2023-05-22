@@ -33,7 +33,6 @@ class Theater{
 	int bookCnt = 0;				
 	int money = 0;					
 	
-	
 	void showMenu() {
 		
 		System.out.println("=== 메가박스 ===");
